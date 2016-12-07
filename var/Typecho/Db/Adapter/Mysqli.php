@@ -166,4 +166,16 @@ class Typecho_Db_Adapter_Mysqli implements Typecho_Db_Adapter
     {
         return $this->_dbLink->insert_id;
     }
+
+    /**
+     * 获取数据库版本
+     *
+     * @param mixed $handle
+     * @return string
+     */
+    public function getVersion($handle)
+    {
+        // TODO: Implement getVersion() method.
+        return mysqli_get_server_version($handle);
+    }
 }
